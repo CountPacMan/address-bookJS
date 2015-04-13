@@ -1,8 +1,12 @@
-#result {
+#show-contact {
   display: none;
 }
 
-img {
-  width: 25%;
-  height: 25%;
+.contact {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.contact:hover {
+  text-decoration: underline;
 }

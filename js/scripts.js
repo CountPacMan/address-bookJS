@@ -1,29 +1,29 @@
-function getTriangle(sideA, sideB, sideC) {
-  // sides cannot be 0 and one side cannot be longer than the other
-  // two combined
-  if (sideA === 0 || sideB === 0 || sideC === 0 ||
-      sideA + sideB < sideC || sideB + sideC < sideA ||
-      sideA + sideC < sideB) {
-    return "not a triangle";
-  } else if (sideA === sideB && sideA === sideC) {
-    return "equilateral";
-  } else if (sideA === sideB || sideA === sideC || sideB === sideC) {
-    return "isosceles";
-  } else {
-    return "scalene";
-  }
-}
-
 
 jQuery(document).ready(function() {
-  $("#sideA").focus();
-  $("#triangle").submit(function(event) {
-    var sideA = parseInt($("#sideA").val());
-    var sideB = parseInt($("#sideB").val());
-    var sideC = parseInt($("#sideC").val());
-    var result = getTriangle(sideA, sideB, sideC);
-    $("#triangle-type").text(result);
-    $("#result").show();
+  $("#firstName").focus();
+  $("#address-book").submit(function(event) {
     event.preventDefault();
+    var inputFirstName = $("#firstName").val();
+    var inputLastName = $("#lastName").val();
+    var inputAddress = $("#address").val();
+    var newContact = {firstName: inputFirstName, lastName: inputLastName, address: inputAddress};
+
+    $("ul#contacts").append("<li><span class='contact'>" + newContact.firstName + " " + newContact.lastName + "</span></li>");
+
+    $("#firstName").val("");
+    $("#lastName").val("");
+    $("#address").val("");
+
+    $("#result").show();
+
+    $(".contact").last().click(function(){
+      $("#show-contact").show();
+      $("#show-contact h2").text(newContact.firstName + " " + newContact.lastName);
+      $(".first-name").text(newContact.firstName);
+      $(".last-name").text(newContact.lastName);
+      $(".address").text(newContact.address);
+
+    });
+
   });
 });

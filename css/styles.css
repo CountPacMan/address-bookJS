@@ -2,6 +2,10 @@
   display: none;
 }
 
+p {
+  font-weight: bold;
+}
+
 .contact {
   cursor: pointer;
   color: #0088cc;
@@ -9,4 +13,8 @@
 
 .contact:hover {
   text-decoration: underline;
+}
+
+.norm {
+  font-weight: normal;
 }

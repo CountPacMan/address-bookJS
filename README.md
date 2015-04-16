@@ -1,6 +1,6 @@
 # Address Book for Epicodus Assessment
-## by Daniel Toader and Brian Kropff
-### Date: April 14, 2015
+## by Daniel Toader and Brian Kropff and Tanner Heffner
+### Date: April 16, 2015
 #### Description
 This web app is an address book.
 
@@ -8,7 +8,7 @@ This web app is an address book.
 1. Clone this git repository
 2. Start the web app by loading address-book.html in your browser
 
-#### Copyright © 2015, Daniel Toader and Brian Kropff
+#### Copyright © 2015, Daniel Toader and Brian Kropff and Tanner Heffner
 
 #### License: [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
